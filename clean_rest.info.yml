@@ -1,0 +1,7 @@
+name: Clean REST
+type: module
+description: Provides a simpler & cleaner REST output of entities.
+core: 8.x
+package: Web services
+dependencies:
+  - serialization

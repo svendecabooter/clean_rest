@@ -1,0 +1,6 @@
+services:
+  serializer.normalizer.content_entity.clean:
+    class: Drupal\clean_rest\Normalizer\ContentEntityNormalizer
+    arguments: ['@entity.manager']
+    tags:
+    - { name: normalizer, priority: 20 }
