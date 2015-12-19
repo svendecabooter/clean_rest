@@ -112,7 +112,7 @@ class ContentEntityNormalizer extends EntityNormalizer {
     if ($field instanceof FieldItemList) {
 
       $multiple = $object->getFieldDefinition($field_name)->getFieldStorageDefinition()->isMultiple();
-      if (!$multiple) {
+      if (!$multiple && isset($object->$field_name->value)) {
         return $object->$field_name->value;
       }
     }
